@@ -18,7 +18,6 @@
     <!-- Navbar Scura -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <!-- Logo placeholder (sostituire 'duck_logo_placeholder' con il percorso reale della tua immagine) -->
         <a class="navbar-logo" href="#">
           <img
             src="./img/duck.png"
@@ -59,26 +58,39 @@
             </li>
           </ul>
         </div>
+        <!-- Form di ricerca allineato a destra (visibile solo da desktop in su) -->
+        <!-- ms-auto spinge il form a destra. d-none nasconde su mobile, d-md-flex lo mostra come flexbox su desktop -->
+        <form class="d-none d-lg-flex ms-auto">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Cerca..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Cerca</button>
+        </form>
       </div>
     </nav>
 
     <!-- Contenitore Principale -->
-    <div class="container mt-4">
-      <!-- Riga per il titolo e il bottone -->
-      <div class="row mb-3 align-items-center">
-        <div class="col">
-          <h1>Catalogo Libri</h1>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-primary">Aggiungi Libro</button>
-        </div>
-      </div>
-
-      <!-- Riga principale per i due container che si affiancano su desktop e si impilano su mobile/tablet -->
-      <!-- Usa col-md-8 per la tabella (più larga) e col-md-4 per la sidebar su schermi medi e grandi -->
+    <!-- Questo div è il contenitore principale di tutta la tua pagina web e ha due scopi fondamentali nell'ecosistema Bootstrap:
+1. class="container"
+Questa è la classe di layout più importante di Bootstrap. Serve a:
+Centrare il contenuto: Applica automaticamente margini a sinistra e a destra per centrare il tuo contenuto nella viewport (finestra del browser).
+Gestire la larghezza: Controlla la larghezza massima del tuo sito web. A seconda che tu stia usando .container (larghezza fissa a breakpoint specifici) o .container-fluid (100% della larghezza), definisce i confini entro i quali il tuo layout a griglia (.row e .col) può operare.
+Senza di esso, il tuo contenuto si estenderebbe per l'intera larghezza della finestra del browser, rendendo il sito difficile da leggere sui desktop molto grandi. -->
+    <div class="container my-4">
       <div class="row g-4">
         <!-- Colonna Sinistra: Tabella Libri -->
         <div class="col-md-8">
+          <!-- Sostituito row/col con d-flex e justify-content-between -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <!-- Il titolo occuperà lo spazio rimanente -->
+            <h1 class="mb-0">Catalogo Libri</h1>
+
+            <!-- Il bottone non ha bisogno di classi di colonna, si auto-allinea a destra -->
+            <button class="btn btn-primary">Aggiungi Libro</button>
+          </div>
           <div class="card shadow-sm">
             <div class="card-body p-0">
               <div class="table-responsive">
@@ -313,39 +325,54 @@
         </div>
 
         <!-- Colonna Destra: Todo List e F.A.Q. -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <!-- Card Todo List -->
-          <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-              <h5 class="mb-0">Todo</h5>
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h5 class="mb-0">Todo</h5>
+              </div>
+
+              <!-- La lista ha la classe list-group-flush per i bordi sottili -->
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check1"
+                    />
+                    <label class="form-check-label" for="check1">
+                      Chiamare segreteria
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check2"
+                    />
+                    <label class="form-check-label" for="check2">
+                      Mandare avvisi prestiti scaduti
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="check3"
+                    />
+                    <label class="form-check-label" for="check3">
+                      Ordinare nuovi libri
+                    </label>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="check1" />
-                  <label class="form-check-label" for="check1">
-                    Chiamare segreteria
-                  </label>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="check2" />
-                  <label class="form-check-label" for="check2">
-                    Mandare avvisi prestiti scaduti
-                  </label>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="check3" />
-                  <label class="form-check-label" for="check3">
-                    Ordinare nuovi libri
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </div>
+          
 
           <!-- F.A.Q. con Accordion -->
           <div class="card shadow-sm">
@@ -439,10 +466,7 @@
       </div>
     </div>
 
-    <script
-      src="cdn.jsdelivr.net"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    
+    <script src="cdn.jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
