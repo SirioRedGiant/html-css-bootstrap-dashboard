@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria Online</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <!-- Navbar Scura -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo placeholder (sostituire 'duck_logo_placeholder' con il percorso reale della tua immagine) -->
+            <a class="navbar-logo" href="#">
+                <img src="./img/duck.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Catalogo Libri
+            </a>
+            <!-- Toggler per l'hamburger menu (visibile su mobile/tablet) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Elementi del menu collassabili -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Utenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Impostazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenitore Principale -->
+    <div class="container mt-4">
+        <!-- Riga per il titolo e il bottone -->
+        <div class="row mb-3 align-items-center">
+            <div class="col">
+                <h1>Catalogo Libri</h1>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-primary">Aggiungi Libro</button>
+            </div>
+        </div>
+
+        <!-- Riga principale per i due container che si affiancano su desktop e si impilano su mobile/tablet -->
+        <!-- Usa col-md-8 per la tabella (più larga) e col-md-4 per la sidebar su schermi medi e grandi -->
+        <div class="row g-4">
+            
+            <!-- Colonna Sinistra: Tabella Libri -->
+            
+        </div>
+    </div>
+
+    
+
+     <script
+      src="cdn.jsdelivr.net"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
