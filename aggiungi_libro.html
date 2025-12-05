@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuovo Libro</title>
+    <!-- Il CSS di Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <span class="bi bi-book-half me-2"></span>
+          Libreria Online
+        </a>
+      </div>
+    </nav>
+
+    <!-- Contenitore Principale -->
+    <div class="container my-4 px-4">
+      <h1 class="mb-4">Nuovo Libro</h1>
+
+        <!-- Autore e Cognome -->
+        <!-- occuperanno sempre 6 -  -->
+        <div class="row g-3 mb-3">
+          <div class="col-6 col-md-6">
+            <label for="nome-autore" class="form-label">Nome Autore</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome-autore"
+              placeholder="Inserisci il nome dell'autore"
+            />
+          </div>
+          <div class="col-6 col-md-6">
+            <label for="cognome-autore" class="form-label">Cognome Autore</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cognome-autore"
+              placeholder="Inserisci il cognome dell'autore"
+            />
+          </div>
+        </div>
+
+        <!-- Titolo del libro -->
+        <div class="mb-3">
+          <label for="titolo" class="form-label">Titolo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="titolo"
+            placeholder="Inserisci il titolo del libro"
+          />
+          <div id="titoloHelp" class="form-text">Titolo versione italiana</div>
+        </div>
+
+        <!-- Genere, Anno di Pubblicazione e ISBN -->
+        <div class="row g-3 mb-4">
+          <div class="col-12 col-md-4">
+            <label for="genere" class="form-label">Genere</label>
+            <select class="form-select" id="genere">
+              <option selected><strong>Scegli il genere</strong></option>
+              <option value="romance">Romanzo d'amore</option>
+              <option value="science-fiction">Fantascienza</option>
+              <option value="fantasy">Fantasy</option>
+              <option value="mystery">Giallo/Mistero</option>
+              <option value="thriller">Thriller e Suspense</option>
+              <option value="horror">Orrore</option>
+              <option value="historical-fiction">Narrativa storica</option>
+              <option value="young-adult">Adolescenziali</option>
+              <option value="manga">Manga</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-4">
+            <label for="annoPubblicazione" class="form-label"
+              >Anno di Pubblicazione</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="annoPubblicazione"
+              placeholder="Inserisci l'anno"
+            />
+          </div>
+          <div class="col-12 col-md-4">
+            <label for="isbn" class="form-label">ISBN#</label>
+            <input
+              type="text"
+              class="form-control"
+              id="isbn"
+              placeholder="Inserisci il codice ISBN#"
+            />
+          </div>
+        </div>
+        <hr>
+
+        <!-- Note con la Textarea -->
+        <div class="mb-3">
+          <label for="note" class="form-label">Note</label>
+          <textarea
+            class="form-control"
+            id="note"
+            rows="3"
+            placeholder="Inserisci eventuali note sul libro"
+          ></textarea>
+        </div>
+
+        <!-- Checkbox Digitale -->
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="disponibileDigitale" />
+          <label class="form-check-label" for="disponibileDigitale"
+            ><strong>Disponibile anche in digitale</strong></label
+          >
+        </div>
+
+        <!-- Conferma e aggiungi -->
+        <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
