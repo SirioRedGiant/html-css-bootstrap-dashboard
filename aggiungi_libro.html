@@ -18,13 +18,60 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar Scura -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <span class="bi bi-book-half me-2"></span>
-          Libreria Online
+        <a class="navbar-logo" href="#">
+          <img
+            src="./img/img_2/duck.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
         </a>
+        <!-- Toggler per l'hamburger menu (visibile su mobile/tablet) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementi del menu collassabili -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Catalogo Libri</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Anagrafica Utenti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Storico Prestiti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Form di ricerca allineato a destra (visibile solo da desktop in su) -->
+        <!-- ms-auto spinge il form a destra. d-none nasconde su mobile, d-md-flex lo mostra come flexbox su desktop -->
+        <form class="d-none d-lg-flex ms-auto">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Cerca..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Cerca</button>
+        </form>
       </div>
     </nav>
 
