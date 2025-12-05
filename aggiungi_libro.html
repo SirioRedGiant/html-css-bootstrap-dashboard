@@ -61,9 +61,7 @@
             </li>
           </ul>
         </div>
-        <!-- Form di ricerca allineato a destra (visibile solo da desktop in su) -->
-        <!-- ms-auto spinge il form a destra. d-none nasconde su mobile, d-md-flex lo mostra come flexbox su desktop -->
-        <form class="d-none d-lg-flex ms-auto">
+        <form action="https://learning.tizianonicolai.com/request-catcher/" method="get" class="d-none d-lg-flex ms-auto">
           <input
             class="form-control me-2"
             type="search"
@@ -74,11 +72,10 @@
         </form>
       </div>
     </nav>
-
     <!-- Contenitore Principale -->
     <div class="container my-4 px-4">
       <h1 class="mb-4">Nuovo Libro</h1>
-
+      <form action="https://learning.tizianonicolai.com/request-catcher/" method="post">
         <!-- Autore e Cognome -->
         <!-- occuperanno sempre 6 -  -->
         <div class="row g-3 mb-3">
@@ -92,7 +89,9 @@
             />
           </div>
           <div class="col-6 col-md-6">
-            <label for="cognome-autore" class="form-label">Cognome Autore</label>
+            <label for="cognome-autore" class="form-label"
+              >Cognome Autore</label
+            >
             <input
               type="text"
               class="form-control"
@@ -152,7 +151,7 @@
             />
           </div>
         </div>
-        <hr>
+        <hr />
 
         <!-- Note con la Textarea -->
         <div class="mb-3">
@@ -167,13 +166,18 @@
 
         <!-- Checkbox Digitale -->
         <div class="mb-4 form-check">
-          <input type="checkbox" class="form-check-input" id="disponibileDigitale" />
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="disponibileDigitale"
+          />
           <label class="form-check-label" for="disponibileDigitale"
             ><strong>Disponibile anche in digitale</strong></label
           >
         </div>
 
         <!-- Conferma e aggiungi -->
+
         <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
       </form>
     </div>
